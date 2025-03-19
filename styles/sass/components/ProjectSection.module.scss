@@ -1,0 +1,80 @@
+.projectsCards {
+  /* evt. achtergrond- of padding-styling */
+  background-color: #fafafa;
+
+  /* voorbeeld mobile-friendly padding */
+  &.section-padding {
+    padding: 60px 0;
+
+    @media (max-width: 767px) {
+      padding: 40px 0;
+    }
+  }
+
+  .projectCard {
+    background: #fff;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: 767px) {
+      margin-bottom: 20px;
+    }
+
+    .cardImg {
+      width: 100%;
+      height: 200px;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+    }
+
+    .cardContent {
+      padding: 20px;
+
+      h3 {
+        font-size: 18px;
+        margin: 0 0 10px;
+        font-weight: 600;
+      }
+
+      .cardDesc {
+        margin: 0 0 15px;
+        font-size: 14px;
+        line-height: 1.4em;
+        /* 1 regel, ellipsis */
+        height: 1.4em;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .readMoreBtn {
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 14px;
+        color: #333;
+        text-decoration: none;
+        position: relative;
+        padding-right: 20px;
+
+        &:hover {
+          color: #0052da;
+        }
+
+        .icon {
+          margin-left: 5px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

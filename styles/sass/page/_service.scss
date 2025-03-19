@@ -1,0 +1,133 @@
+/*--------------------------------------------------------------
+7. wpo-service-single-section
+--------------------------------------------------------------*/
+
+/* Nieuwe selectors om het op de blog-style te laten lijken */
+.wpo-service-single-section {
+    .wpo-blog-content {
+        /* Dit geeft dezelfde styling-structuur als in je BlogSingle */
+        .post.format-standard-image {
+            margin-bottom: 40px;
+            @media (max-width: 767px) {
+                margin-bottom: 30px;
+            }
+
+            .entry-media {
+                position: relative;
+                img {
+                    width: 100%;
+                    height: auto;
+                    display: block;
+                    /* Als je max-height wilt forceren:
+                       max-height: 450px; object-fit: cover;
+                    */
+                }
+            }
+
+            .entry-meta {
+                list-style: none;
+                overflow: hidden;
+                margin: 20px 0;
+
+                ul {
+                    list-style: none;
+                    padding: 0;
+                    display: inline-block;
+
+                    li {
+                        font-weight: 500;
+                        font-size: 14px;
+                        float: left;
+                        text-transform: uppercase;
+                        margin-right: 20px;
+                        color: #636893;
+
+                        i {
+                            position: relative;
+                            top: 2px;
+                            margin-right: 5px;
+                        }
+
+                        &:last-child {
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }
+
+            h2 {
+                font-size: 30px;
+                margin: 0.7em 0 0.5em;
+                font-weight: 700;
+                line-height: 1.3em;
+                @media (max-width: 767px) {
+                    font-size: 25px;
+                }
+            }
+
+            p {
+                margin-bottom: 1.5em;
+                line-height: 1.6;
+            }
+
+            /* Subheadings (SEO-secties) */
+            h3 {
+                font-size: 22px;
+                margin: 1.6em 0 1em;
+                font-weight: 600;
+                line-height: 1.3em;
+                @media (max-width: 767px) {
+                    font-size: 20px;
+                }
+            }
+
+            blockquote {
+                background-color: #f2f2f2;
+                padding: 40px;
+                margin-top: 40px;
+                margin-bottom: 40px;
+                text-align: center;
+                font-size: 18px;
+                line-height: 1.4em;
+                position: relative;
+                border-left: 3px solid $theme-primary-color;
+                color: #333;
+                @media (max-width: 767px) {
+                    font-size: 16px;
+                    padding: 30px;
+                }
+            }
+        }
+    }
+}
+
+/* Jouw bestaande code voor .wpo-service-single-section... */
+.wpo-service-single-section{
+    /* IK LAAT DE REST ZOALS JOUW CODE.
+       HIER KUN JE DUS JE EIGEN STYLING BEHOUDEN.
+       Gewoon even checken dat niets conflicteert. */
+
+    /* Voorbeeld:
+    .wpo-service-single-wrap {
+      ...
+    }
+
+    .wpo-service-single-content {
+      ...
+    }
+
+    etc.
+    */
+}
+
+/* Extra: styling voor .wpo-faq-section als je dat op blogstyle wilt laten lijken */
+.wpo-faq-section {
+    margin-top: 40px;
+    h4 {
+        font-size: 22px;
+        font-weight: 700;
+        margin-bottom: 25px;
+        color: #333;
+        text-transform: uppercase;
+    }
+}
