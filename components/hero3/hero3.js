@@ -27,7 +27,7 @@ const Hero3 = () => {
                                 <p>
                                     Wij zijn een gecertificeerd loodgietersbedrijf. Of het nu gaat
                                     om een lekkage, verstopping of een complete installatie,
-                                    wij staan voor u klaar – dag en nacht.
+                                    wij staan voor u klaar – 24/7 dag en nacht.
                                 </p>
                             </div>
 
