@@ -28,12 +28,12 @@ const ServiceSidebar = () => {
 
                 {/* 2. Contact-CTA */}
                 <div className="wpo-contact-widget widget">
-                    <h2>Hoe kunnen wij u helpen?</h2>
+                    <h2>Opschalen met één partner?</h2>
                     <p>
-                        Wij staan altijd klaar om u te adviseren en te helpen bij
-                        al uw loodgieterswerk. Neem gerust contact met ons op!
+                        Bespreek uw onderhoudscontract, renovatieplanning of calamiteitenplan met ons
+                        serviceteam. Wij denken mee vanaf strategie tot uitvoering.
                     </p>
-                    <Link href="/contact">Neem contact op</Link>
+                    <Link href="/contact">Plan een gesprek</Link>
                 </div>
 
                 {/* 3. Recente Blogs - Nu met thumbnail & datum */}

@@ -7,14 +7,14 @@ const Features = (props) => {
                 <div className="wpo-features-wrap">
                     <div className="row align-items-center justify-content-between">
 
-                        {/* Stap 1: Afspraak maken */}
+                        {/* Stap 1: Intake en planning */}
                         <div className="col col-lg-4 col-md-4 col-sm-4 col-6">
                             <div className="wpo-features-item">
                                 <div className="wpo-features-icon">
-                                    <img src="/images/icon/calendar.svg" alt="Afspraak Maken" />
+                                    <img src="/images/icon/calendar.svg" alt="Zakelijke intake" />
                                 </div>
                                 <div className="wpo-features-text">
-                                    <h4>Afspraak maken</h4>
+                                    <h4>Intake & planning</h4>
                                 </div>
                             </div>
                             <div className="angle">
@@ -22,14 +22,14 @@ const Features = (props) => {
                             </div>
                         </div>
 
-                        {/* Stap 2: Wij komen langs */}
+                        {/* Stap 2: Technische inspectie */}
                         <div className="col col-lg-4 col-md-4 col-sm-4 col-6">
                             <div className="wpo-features-item active">
                                 <div className="wpo-features-icon">
-                                    <img src="/images/icon/express-delivery.svg" alt="Wij Komen Langs" />
+                                    <img src="/images/icon/express-delivery.svg" alt="Technische inspectie" />
                                 </div>
                                 <div className="wpo-features-text">
-                                    <h4>Wij komen langs</h4>
+                                    <h4>Inspectie op locatie</h4>
                                 </div>
                             </div>
                             <div className="angle">
@@ -37,14 +37,14 @@ const Features = (props) => {
                             </div>
                         </div>
 
-                        {/* Stap 3: Probleem opgelost */}
+                        {/* Stap 3: Servicecontract */}
                         <div className="col col-lg-4 col-md-4 col-sm-4 col-12">
                             <div className="wpo-features-item">
                                 <div className="wpo-features-icon">
-                                    <img src="/images/icon/prototype.svg" alt="Probleem Opgelost" />
+                                    <img src="/images/icon/prototype.svg" alt="Servicecontract" />
                                 </div>
                                 <div className="wpo-features-text">
-                                    <h4>Probleem opgelost</h4>
+                                    <h4>Servicecontract & beheer</h4>
                                 </div>
                             </div>
                         </div>

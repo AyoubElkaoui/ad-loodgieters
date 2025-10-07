@@ -14,19 +14,23 @@ const ServiceSection2 = (props) => {
                 <div className="row align-items-center justify-content-center">
                     <div className="col-lg-5">
                         <div className="wpo-section-title">
-                            <h2>Onze Diensten</h2>
+                            <h2>Zakelijke diensten</h2>
                             <p>
-                                Hieronder vindt u een overzicht van de meest voorkomende loodgieterswerkzaamheden
-                                die wij voor u kunnen uitvoeren. Of u nu een lekkage heeft, een nieuwe boiler wilt
-                                installeren of professioneel advies zoekt—wij staan voor u klaar.
+                                Wij ondersteunen vastgoedbeheerders, facilitair managers en ketens met specialistisch
+                                loodgieterswerk. Van preventief onderhoud tot complexe projecten: wij leveren betrouwbare
+                                service met minimale stilstand voor uw organisatie.
+                            </p>
+                            <p>
+                                Starbucks, La Place, BAM en Rizani De Echer Hotel vertrouwen op onze landelijke aanpak.
+                                Eén centrale desk, vaste serviceteams en rapportages die u direct kunt delen met stakeholders.
                             </p>
                         </div>
                     </div>
                 </div>
                 <div className="row">
                     {Services.map((service, index) => (
-                        <div className="col-lg-4 col-md-6 col-12" key={index}>
-                            <div className="wpo-service-item">
+                        <div className="col-lg-4 col-md-6 col-12 d-flex" key={index}>
+                            <div className="wpo-service-item w-100">
                                 {/* Afbeelding of icoon */}
                                 <div className="wpo-service-img">
                                     <img src={service.sIcon} alt="" />
@@ -59,7 +63,13 @@ const ServiceSection2 = (props) => {
                                 </div>
 
                                 {/* Icon dat zichtbaar is bij hover (volgens je template) */}
-                                <div className="visible-icon">
+                                <div
+                                    className={`visible-icon ${
+                                        service.sIcon.includes('warning-triangle-svgrepo-com.svg')
+                                            ? 'visible-icon-warning'
+                                            : ''
+                                    }`}
+                                >
                                     <img src={service.sIcon} alt="" />
                                 </div>
                             </div>

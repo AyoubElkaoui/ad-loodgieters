@@ -14,7 +14,7 @@ const BlogSingle = (props) => {
     return (
         <Fragment>
             <Navbar/>
-            <PageTitle pageTitle={'Latest News'} pagesub={'Blog'}/>
+            <PageTitle pageTitle={'Zakelijke inzichten'} pagesub={'Blog'}/>
             <BlogSection/>
             <FunFact/>
             <TeamSection/>

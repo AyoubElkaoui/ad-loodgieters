@@ -55,9 +55,12 @@ const Contactpage = () => {
                             </div>
                         </div>
                         <div className="wpo-contact-title">
-                            <h2>Heeft u nog vragen?</h2>
-                            <p>Vul het onderstaande formulier we nemen binnen 24 uur contact met u op.
-                                Is er sprake van spoed bel ons dan we zijn 24/7 bereikbaar. </p>
+                            <h2>Plan uw zakelijke consult</h2>
+                            <p>
+                                Laat ons weten welke vestiging, portefeuille of project u wilt bespreken.
+                                Ons serviceteam reageert binnen één werkdag met een concreet voorstel of plant direct
+                                een technisch overleg in. Spoed? Bel onze 24/7 storingslijn voor directe inzet.
+                            </p>
                         </div>
                         <div className="wpo-contact-form-area">
                             <ContactForm/>

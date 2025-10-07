@@ -14,7 +14,7 @@ const ServicePage = (props) => {
     return (
         <div>
             <Navbar/>
-            <PageTitle pageTitle={'Diensten'} pagesub={'Diensten'}/>
+            <PageTitle pageTitle={'Zakelijke diensten'} pagesub={'Diensten'}/>
             <ServiceSection/>
             <FunFact/>
             <TeamSection/>
@@ -26,5 +26,4 @@ const ServicePage = (props) => {
     )
 };
 export default ServicePage;
-
 

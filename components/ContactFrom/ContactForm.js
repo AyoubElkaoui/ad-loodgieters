@@ -27,16 +27,17 @@ function gtag_report_conversion(url) {
 
 const ContactForm = () => {
     const [formData, setFormData] = useState({
+        company: '',
         name: '',
         email: '',
-        postalCode: '',
-        houseNumber: '',
-        houseNumberAddition: '',
         phone: '',
-        subject: '',
+        role: '',
+        segment: '',
+        locations: '',
+        city: '',
+        projectType: '',
         message: '',
     });
-    const [files, setFiles] = useState([]);
     const [recaptchaToken, setRecaptchaToken] = useState(null);
     const [status, setStatus] = useState('');
     const formRef = useRef(null);
@@ -49,6 +50,7 @@ const ContactForm = () => {
             numeric: 'Dit veld moet een getal zijn.',
             regex: 'Ongeldige invoer.',
             min: 'Moet minimaal :min karakters bevatten.',
+            in: 'Selecteer een geldige optie.',
         },
     }));
 
@@ -57,13 +59,6 @@ const ContactForm = () => {
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
         validator.current.showMessageFor(e.target.name);
-    };
-
-    const handleFileChange = (e) => {
-        const selectedFiles = Array.from(e.target.files || []).filter((file) =>
-            file.type.startsWith('image/')
-        );
-        setFiles(selectedFiles);
     };
 
     const handleRecaptchaChange = (token) => {
@@ -93,9 +88,6 @@ const ContactForm = () => {
         Object.entries(formData).forEach(([key, value]) => {
             formDataToSend.append(key, value);
         });
-        files.forEach((file) => {
-            formDataToSend.append('files', file);
-        });
         formDataToSend.append('recaptchaToken', recaptchaToken || '');
 
         try {
@@ -109,16 +101,17 @@ const ContactForm = () => {
                 toast.success('Bericht succesvol verzonden!');
                 // Reset formulier
                 setFormData({
+                    company: '',
                     name: '',
                     email: '',
-                    postalCode: '',
-                    houseNumber: '',
-                    houseNumberAddition: '',
                     phone: '',
-                    subject: '',
+                    role: '',
+                    segment: '',
+                    locations: '',
+                    city: '',
+                    projectType: '',
                     message: '',
                 });
-                setFiles([]);
                 setRecaptchaToken(null);
             } else {
                 const { error } = await response.json();
@@ -147,7 +140,22 @@ const ContactForm = () => {
             encType="multipart/form-data"
         >
             <div className="row">
-                {/* Naam */}
+                {/* Bedrijfsnaam */}
+                <div className="col col-lg-6 col-12">
+                    <div className="form-group">
+                        <label>Bedrijfsnaam*</label>
+                        <input
+                            className="form-control"
+                            name="company"
+                            value={formData.company}
+                            onChange={handleChange}
+                            type="text"
+                            placeholder="Bijv. Starbucks Nederland"
+                        />
+                        {validator.current.message('company', formData.company, 'required')}
+                    </div>
+                </div>
+                {/* Naam contactpersoon */}
                 <div className="col col-lg-6 col-12">
                     <div className="form-group">
                         <label>Naam*</label>
@@ -163,7 +171,7 @@ const ContactForm = () => {
                     </div>
                 </div>
                 {/* E-mail */}
-                <div className="col col-lg-6 col-12">
+                <div className="col col-lg-4 col-12">
                     <div className="form-group">
                         <label>E-mailadres*</label>
                         <input
@@ -177,51 +185,8 @@ const ContactForm = () => {
                         {validator.current.message('email', formData.email, 'required|email')}
                     </div>
                 </div>
-                {/* Postcode */}
-                <div className="col col-lg-6 col-12">
-                    <div className="form-group">
-                        <label>Postcode*</label>
-                        <input
-                            className="form-control"
-                            name="postalCode"
-                            value={formData.postalCode}
-                            onChange={handleChange}
-                            type="text"
-                            placeholder="1234 AB"
-                        />
-                        {validator.current.message('postalCode', formData.postalCode, 'required|regex:^[1-9][0-9]{3}\\s?[A-Za-z]{2}$')}
-                    </div>
-                </div>
-                {/* Huisnummer + toevoeging */}
-                <div className="col col-lg-3 col-6">
-                    <div className="form-group">
-                        <label>Huisnummer*</label>
-                        <input
-                            className="form-control"
-                            name="houseNumber"
-                            value={formData.houseNumber}
-                            onChange={handleChange}
-                            type="text"
-                            placeholder="Bijv. 12"
-                        />
-                        {validator.current.message('houseNumber', formData.houseNumber, 'required|numeric')}
-                    </div>
-                </div>
-                <div className="col col-lg-3 col-6">
-                    <div className="form-group">
-                        <label>Toevoeging</label>
-                        <input
-                            className="form-control"
-                            name="houseNumberAddition"
-                            value={formData.houseNumberAddition}
-                            onChange={handleChange}
-                            type="text"
-                            placeholder="Bijv. A"
-                        />
-                    </div>
-                </div>
                 {/* Telefoonnummer */}
-                <div className="col col-lg-6 col-12">
+                <div className="col col-lg-4 col-12">
                     <div className="form-group">
                         <label>Telefoonnummer*</label>
                         <input
@@ -230,36 +195,106 @@ const ContactForm = () => {
                             value={formData.phone}
                             onChange={handleChange}
                             type="tel"
-                            placeholder="Bijv. 0612345678"
+                            placeholder="+31 6 0000 0000"
                         />
                         {validator.current.message('phone', formData.phone, 'required|numeric|min:10,num')}
                     </div>
                 </div>
-                {/* Onderwerp */}
-                <div className="col col-lg-6 col-12">
+                {/* Functie */}
+                <div className="col col-lg-4 col-12">
                     <div className="form-group">
-                        <label>Onderwerp</label>
+                        <label>Functie</label>
                         <input
                             className="form-control"
-                            name="subject"
-                            value={formData.subject}
+                            name="role"
+                            value={formData.role}
                             onChange={handleChange}
                             type="text"
-                            placeholder="Lekkage"
+                            placeholder="Bijv. Facilitair Manager"
                         />
+                    </div>
+                </div>
+                {/* Sector */}
+                <div className="col col-lg-4 col-12">
+                    <div className="form-group">
+                        <label>Sector</label>
+                        <select
+                            className="form-select"
+                            name="segment"
+                            value={formData.segment}
+                            onChange={handleChange}
+                        >
+                            <option value="">Maak een keuze</option>
+                            <option value="horeca">Horeca & hospitality</option>
+                            <option value="retail">Retail & winkels</option>
+                            <option value="vve">VvE & vastgoedbeheer</option>
+                            <option value="industrie">Industrie & logistiek</option>
+                            <option value="zorg">Zorg & onderwijs</option>
+                            <option value="anders">Anders</option>
+                        </select>
+                    </div>
+                </div>
+                {/* Aantal locaties */}
+                <div className="col col-lg-4 col-12">
+                    <div className="form-group">
+                        <label>Aantal locaties</label>
+                        <input
+                            className="form-control"
+                            name="locations"
+                            value={formData.locations}
+                            onChange={handleChange}
+                            type="number"
+                            min="1"
+                            placeholder="Bijv. 12 vestigingen"
+                        />
+                        {formData.locations && validator.current.message('locations', formData.locations, 'numeric')}
+                    </div>
+                </div>
+                {/* Vestigingsplaats */}
+                <div className="col col-lg-4 col-12">
+                    <div className="form-group">
+                        <label>Vestigingsplaats</label>
+                        <input
+                            className="form-control"
+                            name="city"
+                            value={formData.city}
+                            onChange={handleChange}
+                            type="text"
+                            placeholder="Bijv. Utrecht"
+                        />
+                    </div>
+                </div>
+                {/* Projecttype */}
+                <div className="col col-lg-12">
+                    <div className="form-group">
+                        <label>Type aanvraag*</label>
+                        <select
+                            className="form-select"
+                            name="projectType"
+                            value={formData.projectType}
+                            onChange={handleChange}
+                        >
+                            <option value="">Selecteer een projecttype</option>
+                            <option value="onderhoud">Onderhoudscontract</option>
+                            <option value="renovatie">Renovatie / verbouwing</option>
+                            <option value="nieuwbouw">Nieuwbouwinstallatie</option>
+                            <option value="storingsdienst">Spoed / storingsdienst</option>
+                            <option value="advies">Technisch advies</option>
+                        </select>
+                        {validator.current.message('projectType', formData.projectType, 'required')}
                     </div>
                 </div>
                 {/* Bericht */}
                 <div className="col col-lg-12">
                     <div className="form-group">
-                        <label>Bericht</label>
+                        <label>Toelichting</label>
                         <textarea
                             className="form-control"
                             name="message"
                             value={formData.message}
                             onChange={handleChange}
-                            placeholder="Uw bericht"
-                            rows={4}
+                            placeholder="Beschrijf kort de werkzaamheden, locatie(s) en gewenste planning."
+                            rows={5}
                         />
                     </div>
                 </div>
@@ -276,7 +311,7 @@ const ContactForm = () => {
             </div>
             <div className="submit-area">
                 <button type="button" className="theme-btn" onClick={handleButtonClick}>
-                    Versturen
+                    Verstuur zakelijke aanvraag
                 </button>
             </div>
             {status && <p style={{ marginTop: '15px', color: status.includes('succesvol') ? 'green' : 'red' }}>{status}</p>}

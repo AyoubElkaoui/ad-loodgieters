@@ -15,7 +15,7 @@ const BlogSection = () => {
                 <div className="row align-items-center justify-content-center">
                     <div className="col-lg-6">
                         {/* Nederlandse titel in SectionTitle */}
-                        <SectionTitle MainTitle={"Laatste nieuws & blogs"} />
+                        <SectionTitle MainTitle={"Inzichten voor facility en vastgoed"} />
                     </div>
                 </div>
                 <div className="wpo-blog-items">

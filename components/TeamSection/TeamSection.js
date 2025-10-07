@@ -7,30 +7,29 @@ const ClickHandler = () => {
     window.scrollTo(10, 0);
 };
 
-// Voorbeeld data: vervang logo’s, namen en omschrijvingen door je eigen partners
 const partners = [
     {
         slug: 'starbucks',
         name: 'Starbucks',
-        title: 'Keten van Koffiehuizen',
+        title: 'Multi-site horecalocaties in NL',
         pImg: '/images/partners/starbucks-logo.webp',
     },
     {
         slug: 'bam',
         name: 'BAM',
-        title: 'Bouw en Techniek',
+        title: 'Corporate servicelocaties',
         pImg: '/images/partners/bam-logo.png',
     },
     {
         slug: 'la-place',
         name: 'La Place',
-        title: 'Restaurantketen',
+        title: 'Landelijke foodservice',
         pImg: '/images/partners/laplace-logo.png',
     },
     {
-        slug: 'groot-hotel',
-        name: 'Hotel Skyline',
-        title: 'Luxe Hotelketen',
+        slug: 'rizani-de-echer-hotel',
+        name: 'Rizani De Echer Hotel',
+        title: 'Hospitality kamers & wellness',
         pImg: '/images/partners/hotel-logo.jpg',
     },
 ];
@@ -42,8 +41,8 @@ const PartnersSection = (props) => {
                 <div className="row align-items-center justify-content-center">
                     <div className="col-lg-6">
                         <SectionTitle
-                            MainTitle="Onze Partners"
-                            SubTitle="Wij zijn trots op deze samenwerkingen en danken onze partners voor het vertrouwen."
+                            MainTitle="Strategische partners"
+                            SubTitle="Wij beheren installaties voor landelijke ketens en vastgoedportefeuilles."
                         />
                     </div>
                 </div>

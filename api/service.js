@@ -1,170 +1,172 @@
-const Services = [{
-    Id: '1',
-    sImg: '/images/service/keuken-loodgieter.jpg',
-    sIcon: '/images/icon/kitchen-utensils.png',
-    slug: 'keuken-loodgieterswerk',
-    sTitle: 'Keuken Loodgieterswerk',
-    description: 'Wij bieden snelle en vakkundige hulp bij lekkages, verstoppingen en installatie in uw keuken.',
-    ssImg1: '/images/service-single/2.jpg',
-    ssImg2: '/images/service-single/3.jpg',
+const Services = [
+    {
+        Id: '1',
+        sImg: '/images/service/keuken-loodgieter.jpg',
+        sIcon: '/images/icon/kitchen-utensils.png',
+        slug: 'keuken-loodgieterswerk',
+        sTitle: 'Keukeninstallaties & horeca',
+        description: 'Onderhoud, renovatie en spoedservice voor bedrijfskeukens, foodcourts en franchiseconcepten.',
+        ssImg1: '/images/service-single/2.jpg',
+        ssImg2: '/images/service-single/3.jpg',
 
-    // Introductie en uitgebreide SEO-teksten (totaal ca. 480 woorden)
-    longText1: `Bent u op zoek naar een betrouwbare partner voor het complete loodgieterswerk in uw keuken? Bij 
-    Ad-Loodgietersbedrijf staan wij 24/7 klaar om elk technisch probleem in uw keuken snel en efficiënt op te lossen. 
-    Met meer dan tien jaar ervaring in de branche beschikken wij over de expertise om lekkages, verstoppingen en 
-    installaties met precisie te behandelen. Onze deskundige monteurs werken volgens de hoogste kwaliteitsnormen en zorgen ervoor dat uw keuken altijd optimaal functioneert. Wij combineren moderne technologie met traditioneel vakmanschap, zodat u verzekerd bent van een duurzame oplossing. Uw tevredenheid staat bij ons voorop, en wij streven ernaar u de beste service te bieden, ongeacht de omvang van de klus. Wij leveren altijd kwaliteit en betrouwbaarheid.`,
+        seoHeader1: 'Consistente service voor elke keukenlocatie',
+        longText1: `Of het nu gaat om een Starbucks-bar, La Place keuken of bedrijfsrestaurant: wij zorgen voor een uniforme aanpak op alle locaties. We inventariseren de installaties, risicopunten en openingstijden en vertalen deze naar een servicedraai-boek. Zo weet uw team precies wanneer preventief onderhoud plaatsvindt en wie bij storingen langskomt.`,
 
-    seoHeader2: "Snelle service en transparante tarieven",
-    longText2: `Een goed functionerende keuken is van groot belang voor uw dagelijks comfort. Daarom biedt onze 24/7 spoedservice directe hulp bij elke noodsituatie, zoals hardnekkige verstoppingen of onverwachte lekkages in uw gootsteen. Wij hanteren heldere en transparante prijsafspraken, zodat u altijd vooraf exact weet welke kosten u kunt verwachten. Onze efficiënte en klantgerichte aanpak garandeert dat u nooit lang hoeft te wachten op hulp, terwijl onze deskundige monteurs met zorg en nauwkeurigheid te werk gaan. Door open communicatie voorkomt u extra kosten en stress, zodat u snel weer kunt genieten van een optimaal functionerende keuken. Wij zorgen voor volledige duidelijkheid in onze offertes en werken altijd volgens een plan dat u centraal stelt.`,
+        seoHeader2: 'Nachtelijke werkzaamheden zonder omzetverlies',
+        longText2: `We werken buiten piekuren en stemmen dagplanningen af met de restaurantmanager. Elke interventie eindigt met een HACCP-conforme oplevering, zodat de keuken direct weer inzetbaar is. Rapportages met foto’s en materiaalgebruik zijn binnen twee uur beschikbaar voor facilitair management.`,
 
-    seoHeader3: "Kwaliteit en duurzaamheid als basis",
-    longText3: `Wij geloven dat de basis van elk succesvol project ligt in de kwaliteit van de materialen en de uitvoering. Daarom maken wij uitsluitend gebruik van hoogwaardige en duurzame materialen, gecombineerd met de nieuwste technieken in de branche. Onze monteurs zijn getraind in modern vakmanschap en zorgen ervoor dat elke reparatie of installatie niet alleen voldoet aan de huidige veiligheidsnormen, maar ook op lange termijn meegaat. Deze focus op kwaliteit voorkomt herhaaldelijke problemen en garandeert een veilige werking van uw keukeninstallaties. Door te investeren in topkwaliteit en innovatieve methodes, besparen wij u op toekomstige onderhoudskosten en creëren wij een keuken die zowel functioneel als esthetisch verantwoord is.`,
+        seoHeader3: 'Duurzame upgrades en energiebeheer',
+        longText3: `We adviseren over vetafscheiders, waterbesparing en warmteterugwinning. Onze monteurs installeren foodservice-gereed materiaal en borgen brand- en voedselveiligheid. Door standaardisatie verlagen we onderhoudskosten en krijgt u grip op energie- en waterverbruik.`,
 
-    seoHeader4: "Uw keuken, onze zorg: maatwerk en persoonlijke aanpak",
-    longText4: `Elke keuken is uniek en verdient een oplossing die perfect aansluit op uw specifieke wensen. Bij Ad-Loodgietersbedrijf nemen we de tijd om uw behoeften te begrijpen en adviseren we u over de beste maatwerkaanpak. Of u nu in een compact appartement woont of in een ruime woning, onze oplossingen worden volledig afgestemd op uw situatie. Wij bieden een persoonlijke service, heldere communicatie en transparante offertes, zodat u precies weet wat u kunt verwachten. Laat ons uw keuken weer optimaal laten functioneren met een op maat gemaakte oplossing die zowel praktisch als esthetisch aantrekkelijk is. Neem vandaag nog contact met ons op voor een vrijblijvend advies en ontdek de mogelijkheden voor uw project.`,
+        seoHeader4: 'Langdurige samenwerking',
+        longText4: `Met servicecontracten, SLA’s en landelijke dekking garanderen we responstijden en continuïteit. We koppelen alle gegevens aan dashboards zodat u trends ziet en budgetten kunt plannen. Eén aanspreekpunt, één werkwijze, maximale uptime.`,
 
-    faq: [
-        { question: "Wat zijn de kosten voor keuken loodgieterswerk?", answer: "De kosten zijn afhankelijk van de werkzaamheden. Wij bieden altijd een vrijblijvende offerte." },
-        { question: "Hoe snel kunnen jullie een lekkage verhelpen?", answer: "Wij hebben een 24/7 spoedservice en proberen binnen enkele uren ter plaatse te zijn." },
-        { question: "Werken jullie met garantie op de installaties?", answer: "Ja, wij bieden garantie op al onze installaties en reparaties." }
-    ]
-
-},
+        faq: [
+            { question: 'Werken jullie volgens HACCP en merkprotocollen?', answer: 'Ja, onze teams zijn gecertificeerd en werken volgens de richtlijnen van uw formule of flagged brand.' },
+            { question: 'Kunnen jullie landelijke dekking bieden?', answer: 'We beschikken over mobiele serviceteams per regio en coördineren alles via één centrale desk.' },
+            { question: 'Wat is de gemiddelde responstijd bij storing?', answer: 'Binnen de Randstad zijn we doorgaans binnen 60 minuten op locatie; overige regio’s binnen 90 minuten.' }
+        ]
+    },
     {
         Id: '2',
         sImg: '/images/service/gasleiding-diensten.jpg',
         sIcon: '/images/icon/gas-stove.png',
         slug: 'gasleiding-diensten',
-        sTitle: 'Gasleiding Diensten',
-        description: 'Van aanleggen tot reparatie van gasleidingen — altijd veilig en volgens de geldende normen.',
-        ssImg1: '/images/service-single/2.jpg',
+        sTitle: 'Gasleiding diensten',
+        description: 'Van ontwerp tot beheer van gasinstallaties voor horeca, utiliteit en industrie volgens NEN-normen.',
+        ssImg1: '/images/service-single/1.jpg',
         ssImg2: '/images/service-single/3.jpg',
 
-        longText1: `Onze gasleiding diensten zijn ontwikkeld met veiligheid en betrouwbaarheid als kernwaarden. Wij bieden een directe interventie in urgente situaties, zodat u snel geholpen wordt bij lekkages, verstoppingen of defecten in uw gasleidingen. Met onze 24/7 spoedservice kunt u altijd rekenen op een snelle en professionele aanpak, ongeacht het tijdstip van de dag. Onze ervaren monteurs voeren elke klus uit volgens de strengste veiligheidsnormen en gebruiken uitsluitend gecertificeerde materialen. Hierdoor minimaliseren wij risico’s en zorgen wij voor een optimale werking van uw gasvoorziening. Uw veiligheid en comfort staan bij ons voorop, zodat u zonder zorgen kunt genieten van een stabiele gasinstallatie.`,
+        seoHeader1: 'Veiligheid en continuïteit als uitgangspunt',
+        longText1: `Bedrijven vertrouwen op stabiele gasinstallaties voor warmte, productie en horeca. Wij doen intake, druktesten en leveren een onderhoudsplan op maat. Hierdoor voldoet u aan regelgeving en verzekeraars, terwijl stilstand tot een minimum wordt beperkt.`,
 
-        seoHeader2: "Directe en veilige gasleiding oplossingen",
-        longText2: `Wij garanderen een snelle en nauwkeurige oplossing voor al uw gasleidingproblemen. Onze deskundige specialisten zorgen voor een grondige inspectie en verhelpen eventuele lekkages of verstoppingen direct. Door het gebruik van moderne technologieën en hoogwaardige materialen worden alle werkzaamheden met uiterste precisie uitgevoerd. Onze 24/7 spoedservice zorgt ervoor dat, zelfs in dringende situaties, er onmiddellijk actie wordt ondernomen. Zo voorkomt u gevaarlijke situaties en kunt u rekenen op een veilige gasvoorziening die voldoet aan alle wettelijke normen en eisen.`,
+        seoHeader2: 'Van nieuwbouw tot renovatie',
+        longText2: `We ontwerpen, installeren en certificeren gasleidingen voor nieuwe vestigingen of verbouwingen. Hierbij werken we samen met uw aannemer of technisch dienstverlener en leveren we alle benodigde certificaten en revisietekeningen.`,
 
-        seoHeader3: "Deskundigheid en professioneel vakmanschap",
-        longText3: `Met meer dan tien jaar ervaring in de gasleidingbranche staat ons team garant voor professioneel vakmanschap en deskundigheid. Wij investeren voortdurend in de nieuwste technologieën en trainingen, zodat wij u altijd de beste diensten kunnen bieden. Onze monteurs leveren maatwerkoplossingen voor zowel particuliere als zakelijke klanten en zorgen voor een nauwkeurige uitvoering van elke klus. Dit resulteert in duurzame en efficiënte installaties die uw veiligheid waarborgen en u op de lange termijn kosten besparen.`,
+        seoHeader3: '24/7 storingsdienst en monitoring',
+        longText3: `Bij calamiteiten staan onze monteurs dag en nacht klaar. Met detectiesystemen monitoren we druk en verbruik, waardoor we afwijkingen vroeg signaleren. Zo voorkomt u langdurige sluitingen en waarborgt u de veiligheid van medewerkers en gasten.`,
 
-        seoHeader4: "Transparantie en klantgerichte diensten",
-        longText4: `Wij geloven in open en heldere communicatie met al onze klanten. U ontvangt altijd een gedetailleerde offerte waarin alle kosten duidelijk gespecificeerd zijn, zodat u nooit voor verrassingen komt te staan. Onze klantgerichte aanpak betekent dat wij in elke fase van het project met u overleggen, zodat de oplossing volledig is afgestemd op uw wensen. Onze transparante service en snelle interventie zorgen ervoor dat u met een gerust hart kunt vertrouwen op onze gasleiding oplossingen, zodat uw veiligheid en comfort gegarandeerd zijn.`,
+        seoHeader4: 'Compliance en rapportage',
+        longText4: `Na elke interventie ontvangt u digitale rapportages inclusief meetgegevens, foto’s en advies. Ook ondersteunen we bij audits en inspecties. Zo bent u altijd aantoonbaar compliant.`,
 
         faq: [
-            { question: "Is het vervangen van een gasleiding verplicht?", answer: "Ja, indien de leiding verouderd of beschadigd is, moet deze vervangen worden om veiligheid te garanderen." },
-            { question: "Wat moet ik doen bij een gaslek?", answer: "Sluit direct de gastoevoer en ventileer de ruimte. Neem contact met ons op voor een spoedreparatie." },
-            { question: "Zijn jullie gecertificeerd voor gasleidingen?", answer: "Ja, wij werken volgens de nieuwste veiligheidsnormen en regelgeving." }
+            { question: 'Werken jullie volgens SCIOS en NEN-normen?', answer: 'Ja, onze experts zijn gecertificeerd en leveren documentatie conform NEN-EN 15001, NEN 1078 en SCIOS scope 7.' },
+            { question: 'Kunnen jullie samenwerken met onze interne TD?', answer: 'Zeker, we stemmen werkzaamheden en rapportages af met uw eigen technische dienst.' },
+            { question: 'Helpen jullie bij vergunningen?', answer: 'We ondersteunen bij aanvraag en oplevering, inclusief benodigde dossiers voor gemeente en verzekeraar.' }
         ]
     },
     {
         Id: '3',
-        sImg: '/images/service/waterleiding-reparatie.jpg',
+        sImg: '/images/service/badkamer-loodgieter.jpg',
         sIcon: '/images/icon/water-tap.png',
-        slug: 'waterleiding-reparatie',
-        sTitle: 'Waterleiding Reparatie',
-        description: 'Snelle opsporing van lekkages of breuken in uw waterleidingen, mét duurzaam herstel.',
-        ssImg1: '/images/service-single/2.jpg',
-        ssImg2: '/images/service-single/3.jpg',
+        slug: 'hotel-sanitair-onderhoud',
+        sTitle: 'Sanitair & hotels',
+        description: 'Kamer- en wellnesssanitair voor hotels, serviced apartments en zorglocaties met minimale downtime.',
+        ssImg1: '/images/service-single/1.jpg',
+        ssImg2: '/images/service-single/2.jpg',
 
-        longText1: `Waterleidingproblemen vereisen directe aandacht en een nauwkeurige aanpak. Bij Ad-Loodgietersbedrijf detecteren wij snel lekkages en breuken in uw waterleidingsysteem en zorgen wij voor een directe reparatie om verdere schade te voorkomen. Onze specialisten beschikken over de nieuwste meet- en detectietechnieken en werken met hoogwaardige materialen, zodat u verzekerd bent van een duurzaam herstel van uw installatie. Onze 24/7 spoedservice garandeert dat u in geval van nood nooit lang hoeft te wachten.`,
+        seoHeader1: 'Renovatie zonder de gast te hinderen',
+        longText1: `Wij renoveren en onderhouden sanitair in kamers, suites en wellnessruimtes. Door nauwkeurige planning per vleugel en nachtelijke shifts blijven kamers beschikbaar en blijft de gastbeleving sterk.`,
 
-        seoHeader2: "Efficiënte en duurzame waterleiding reparatie",
-        longText2: `Wij combineren snelheid met een duurzame aanpak om uw waterleidingproblemen effectief op te lossen. Onze technici voeren een grondige inspectie uit en gebruiken innovatieve methoden om de oorzaak van het probleem te achterhalen. Vervolgens zorgen wij voor een reparatie die niet alleen snel is, maar ook lang meegaat. Dit voorkomt herhaaldelijke storingen en minimaliseert toekomstige onderhoudskosten. Uw veiligheid en continuïteit van de watervoorziening staan bij ons centraal.`,
+        seoHeader2: 'Hygiëne en comfort gegarandeerd',
+        longText2: `Elke oplevering bevat druktesten, legionellamonsters en digitale logboeken voor housekeeping en facilitaire teams. We gebruiken materialen die snel te reinigen zijn en bestand tegen intensief gebruik.`,
 
-        seoHeader3: "Deskundigheid en maatwerk in waterleidingreparatie",
-        longText3: `Onze expertise in waterleiding reparatie stelt ons in staat om maatwerkoplossingen te bieden die volledig aansluiten op uw specifieke situatie. Of het nu gaat om een klein lek in een woonhuis of een complex probleem in een bedrijfspand, wij passen onze interventie aan op de omstandigheden. Met een combinatie van ervaring, technische kennis en innovatieve technieken leveren wij een betrouwbare service die uw waterleidingen optimaliseert en uw comfort waarborgt.`,
+        seoHeader3: 'Wellness, spa en bijzondere voorzieningen',
+        longText3: `Wij installeren menginstallaties, spa-afvoeren, geurafsluiters en waterbehandeling. Alles afgestemd op uw merkbeleving en wellnessconcept.`,
 
-        seoHeader4: "Heldere communicatie en transparantie",
-        longText4: `Wij vinden het belangrijk dat u altijd volledig geïnformeerd bent over de werkzaamheden en de bijbehorende kosten. Daarom bieden wij duidelijke en gedetailleerde offertes, zodat u precies weet wat u kunt verwachten. Onze klantgerichte benadering zorgt voor een open dialoog en een zorgvuldige planning, zodat u zonder zorgen kunt vertrouwen op een efficiënte en professionele waterleiding reparatie.`,
+        seoHeader4: 'Nazorg en monitoring',
+        longText4: `Na renovatie combineren we maandelijkse controles, legionellamonitoring en 24/7 storingsdienst. Zo blijven kamers en wellnessruimtes operationeel en voldoet u aan hygiënenormen.`,
 
         faq: [
-            { question: "Wat zijn de meest voorkomende oorzaken van een lekkage?", answer: "Slijtage, bevroren leidingen en beschadigingen zijn de meest voorkomende oorzaken." },
-            { question: "Kan ik zelf een waterlek opsporen?", answer: "U kunt kijken naar vochtplekken of een hogere waterrekening, maar voor nauwkeurige detectie kunt u beter een specialist inschakelen." },
-            { question: "Hoelang duurt een waterleidingreparatie?", answer: "Dit hangt af van de ernst van de schade, maar wij streven naar een snelle oplossing binnen één dag." }
+            { question: 'Kunnen jullie legionellamonsters en rapportages verzorgen?', answer: 'Ja, wij nemen monsters af en leveren rapportages volgens de wettelijke eisen.' },
+            { question: 'Werken jullie ook met internationale hotelstandaarden?', answer: 'We stemmen materialen en werkwijzen af op uw brand guidelines en internationale protocollen.' },
+            { question: 'Hoe communiceren jullie met frontoffice en housekeeping?', answer: 'Dagelijkse updates geven per kamer aan wanneer de ruimte beschikbaar is voor gasten.' }
         ]
     },
     {
         Id: '4',
-        sImg: '/images/service/badkamer-loodgieter.jpg',
-        sIcon: '/images/icon/sink.png',
-        slug: 'badkamer-loodgieterswerk',
-        sTitle: 'Badkamer Loodgieterswerk',
-        description: 'Installatie en onderhoud van sanitair, douches, toiletten en meer voor uw badkamer.',
-        ssImg1: '/images/service-single/2.jpg',
+        sImg: '/images/service/waterleiding-reparatie.jpg',
+        sIcon: '/images/icon/warning-triangle-svgrepo-com.svg',
+        slug: 'facility-spoedservice',
+        sTitle: '24/7 facility spoedservice',
+        description: 'Snelle inzet bij lekkages, verstoppingen en storingen met SLA’s voor ketens, VvE’s en kantoren.',
+        ssImg1: '/images/service-single/1.jpg',
         ssImg2: '/images/service-single/3.jpg',
 
-        longText1: `Een functionele en stijlvolle badkamer begint met professioneel loodgieterswerk. Wij verzorgen de installatie en het onderhoud van alle elementen in uw badkamer, van sanitair en douches tot toiletten en afvoersystemen. Onze aanpak combineert technische precisie met een oog voor design, zodat uw badkamer zowel praktisch als modern is. Met onze uitgebreide ervaring in badkamerinstallaties garanderen wij een zorgvuldige uitvoering en langdurige tevredenheid.`,
+        seoHeader1: 'Duidelijke escalatiestructuur',
+        longText1: `Samen bepalen we wat een kritieke storing is en hoe meldingen worden geëscaleerd. Onze meldkamer registreert, filtert en communiceert realtime met uw facilitair team zodat iedereen weet wat er gebeurt.`,
 
-        seoHeader2: "Compleet badkamer loodgieterswerk",
-        longText2: `Wij realiseren complete oplossingen voor uw badkamer, waarbij we zowel de technische als de esthetische aspecten meenemen. Van het vernieuwen van oude installaties tot het installeren van nieuwe, energiezuinige systemen, wij zorgen ervoor dat uw badkamer optimaal functioneert. Onze diensten omvatten alles van waterafvoer tot het aansluiten van moderne sanitair, en we werken altijd volgens de hoogste kwaliteitsnormen.`,
+        seoHeader2: 'Responstijden die stand houden',
+        longText2: `Met regionale ploegen garanderen we korte aanrijtijden. Onze monteurs brengen direct verslag uit met foto- en videorapportage, zodat u inzicht hebt in oorzaak, oplossing en vervolg.`,
 
-        seoHeader3: "Expertise en hoogwaardige materialen",
-        longText3: `Onze specialisten beschikken over jarenlange ervaring en gebruiken uitsluitend materialen van topkwaliteit, wat garant staat voor duurzaamheid en veiligheid. Door nauwkeurig vakmanschap en een gedegen planning leveren wij maatwerk dat volledig is afgestemd op uw wensen. Of het nu gaat om een kleine update of een volledige renovatie, wij zorgen voor een strak en functioneel resultaat dat zowel praktisch als visueel aantrekkelijk is.`,
+        seoHeader3: 'Analyse en preventie',
+        longText3: `We analyseren storingsdata en adviseren over structurele verbeteringen, zoals vervanging van drukregelaars of optimalisatie van vetafscheiders. Zo daalt het aantal meldingen en wordt de storingsdienst goedkoper.`,
 
-        seoHeader4: "Heldere communicatie en transparante offertes",
-        longText4: `Wij vinden het belangrijk dat u precies weet wat u kunt verwachten. Daarom bieden wij altijd duidelijke en gedetailleerde offertes zonder verborgen kosten. Onze klantgerichte aanpak zorgt voor een open communicatie gedurende het hele project, zodat u altijd goed geïnformeerd bent en gerust kunt zijn. Zo realiseren wij een badkamer die voldoet aan uw wensen, zowel qua functionaliteit als design.`,
+        seoHeader4: 'Samenwerking met uw partners',
+        longText4: `We stemmen af met beveiliging, recepties en VvE-beheerders. U krijgt één aanspreekpunt en vaste monteurs die uw locaties kennen.`,
 
         faq: [
-            { question: "Kunnen jullie een complete badkamer verbouwen?", answer: "Ja, wij verzorgen zowel het loodgieterswerk als de installatie van sanitair en tegels." },
-            { question: "Helpen jullie bij het kiezen van sanitair?", answer: "Ja, wij kunnen adviseren over de beste opties en materialen voor uw badkamer." },
-            { question: "Hoe lang duurt een badkamer renovatie?", answer: "Gemiddeld duurt een renovatie tussen 1 en 2 weken, afhankelijk van de omvang van het project." }
+            { question: 'Welke responstijden kunnen jullie garanderen?', answer: 'Afhankelijk van de SLA: 30, 60 of 90 minuten on-site responstijd binnen onze servicedekking.' },
+            { question: 'Krijgen we na afloop een rapport?', answer: 'Ja, binnen twee uur ontvangt u digitaal verslag met foto’s en advies.' },
+            { question: 'Kunnen bewoners of storemanagers direct melden?', answer: 'We bieden een meldportaal en telefoonlijn zodat iedereen snel geholpen wordt.' }
         ]
     },
     {
         Id: '5',
-        sImg: '/images/service/kelder-loodgieter.jpg',
-        sIcon: '/images/icon/basement.png',
-        slug: 'kelder-loodgieterswerk',
-        sTitle: 'Kelder Loodgieterswerk',
-        description: 'Complete kelderwerkzaamheden: afvoer, pompen en vochtproblematiek—wij lossen het op.',
-        ssImg1: '/images/service-single/2.jpg',
-        ssImg2: '/images/service-single/3.jpg',
-
-        longText1: `Een droge en veilige kelder is essentieel voor zowel woningen als bedrijfspanden. Wij bieden complete oplossingen voor kelder loodgieterswerk, zodat u geen last heeft van vochtproblemen of afvoerstoringen. Onze specialisten voeren alle werkzaamheden nauwkeurig uit, van het installeren van afvoer- en pompsystemen tot het aanpakken van vochtproblemen met innovatieve technieken.`,
-
-        seoHeader2: "Efficiënt en duurzaam kelder loodgieterswerk",
-        longText2: `Wij zorgen voor een optimale werking van uw kelderinstallaties door gebruik te maken van de nieuwste technologieën en hoogwaardige materialen. Onze efficiënte aanpak minimaliseert onderhoudskosten en voorkomt toekomstige problemen, waardoor uw kelder veilig en functioneel blijft. U kunt rekenen op een duurzame oplossing die speciaal is afgestemd op de unieke eisen van uw pand.`,
-
-        seoHeader3: "Veiligheid en nauwkeurigheid",
-        longText3: `Onze experts werken met uiterste precisie en voeren grondige controles uit op elke installatie, zodat uw kelder volledig voldoet aan de strengste veiligheidsnormen. Wij garanderen dat elke reparatie en installatie met zorg en aandacht wordt uitgevoerd, zodat u verzekerd bent van een betrouwbare en veilige kelderomgeving voor zowel wonen als werken.`,
-
-        seoHeader4: "Maatwerk en klantgerichte diensten",
-        longText4: `Wij bieden op maat gemaakte oplossingen voor kelder loodgieterswerk, afgestemd op uw specifieke behoeften. Of het nu gaat om een kleine reparatie of een volledige renovatie, wij leveren een professionele diensten met duidelijke communicatie en transparante prijsafspraken. Onze klantgerichte aanpak zorgt ervoor dat u altijd goed geïnformeerd bent, zodat u met vertrouwen kunt rekenen op een duurzame en efficiënte oplossing.`,
-
-        faq: [
-            { question: "Hoe kan ik vochtproblemen in mijn kelder voorkomen?", answer: "Door goede ventilatie en een professioneel afvoersysteem te laten installeren, voorkomt u vochtproblemen." },
-            { question: "Is een kelderpomp nodig?", answer: "Als uw kelder regelmatig last heeft van wateroverlast, dan kan een kelderpomp een effectieve oplossing zijn." },
-            { question: "Hoe lang duurt een kelderrenovatie?", answer: "Dit hangt af van de omvang van het project, maar gemiddeld duurt een renovatie 3 tot 7 dagen." }
-        ]
-
-    },
-    {
-        Id: '6',
         sImg: '/images/service/renovatie-loodgieter.jpg',
         sIcon: '/images/icon/remodeling.png',
         slug: 'renovatie-diensten',
-        sTitle: 'Renovatie Diensten',
-        description: 'Volledige renovatie van keuken, badkamer of andere ruimtes, inclusief loodgieterswerk.',
+        sTitle: 'Renovatie & projectbegeleiding',
+        description: 'Loodgieterswerk binnen kantoor-, retail- en hospitalityrenovaties met geïntegreerde planning.',
         ssImg1: '/images/service-single/2.jpg',
         ssImg2: '/images/service-single/3.jpg',
 
-        longText1: `Onze renovatie diensten biedt een complete oplossing voor het vernieuwen van uw loodgietersinstallaties in diverse ruimtes. Wij begeleiden u vanaf het eerste advies tot de uiteindelijke uitvoering, zodat uw project vlekkeloos verloopt en volledig aan uw verwachtingen voldoet. Onze aanpak combineert grondige planning met professioneel vakmanschap, waardoor elke fase van het renovatieproces zorgvuldig wordt uitgevoerd.`,
+        seoHeader1: 'Van ontwerp tot oplevering',
+        longText1: `Wij werken samen met architecten, aannemers en projectmanagers om een betrouwbaar installatieontwerp neer te zetten. We denken mee over routing, capaciteit en onderhoudsvriendelijkheid.`,
 
-        seoHeader2: "Innovatieve renovatie oplossingen",
-        longText2: `Wij maken gebruik van de nieuwste technologieën en hoogwaardige materialen om uw renovatieproject tot een succes te maken. Elke stap wordt nauwkeurig gepland en uitgevoerd, zodat u verzekerd bent van een modern en duurzaam resultaat dat perfect past bij uw leefomgeving. Onze innovatieve methodes zorgen voor een efficiënte uitvoering, wat u zowel tijd als kosten bespaart.`,
+        seoHeader2: 'Strakke fasering',
+        longText2: `Renovaties plannen we in fasen zodat uw locatie open kan blijven. We combineren nachtelijke shifts met weekendwerk en leveren na elke fase een opleverrapport voor de projectleider.`,
 
-        seoHeader3: "Expertise en maatwerk op hoog niveau",
-        longText3: `Met meer dan tien jaar ervaring leveren wij renovatie diensten die volledig op maat zijn gemaakt. Onze specialisten stemmen elke oplossing af op de unieke eisen van uw project, waardoor u profiteert van een perfect geïntegreerde en toekomstbestendige renovatie. Onze deskundigheid en toewijding zorgen voor een resultaat dat zowel functioneel als esthetisch aantrekkelijk is, en dat uw verwachtingen overtreft.`,
+        seoHeader3: 'Kwaliteit en compliance',
+        longText3: `We werken met gecertificeerde materialen en onder controle van kwaliteitsinspecties. U ontvangt revisietekeningen, testcertificaten en handleidingen zodat de installaties direct in beheer kunnen.`,
 
-        seoHeader4: "Transparante communicatie en scherpe offertes",
-        longText4: `Wij geloven in heldere communicatie en geven altijd een gedetailleerde offerte, zodat u precies weet wat u kunt verwachten. Onze klantgerichte aanpak zorgt ervoor dat u tijdens het hele renovatieproces volledig op de hoogte blijft van de voortgang en de kosten. Wij streven naar maximale transparantie en efficiëntie, zodat u zonder zorgen kunt genieten van een vernieuwd en functioneel interieur. Neem vandaag nog contact met ons op voor een vrijblijvende offerte en ontdek de mogelijkheden voor uw renovatie.`,
+        seoHeader4: 'Kosten en nazorg',
+        longText4: `Transparante begrotingen, meerwerk in overleg en nazorg na oplevering. Daarnaast bieden we onderhoudscontracten zodat de nieuwe installaties in topconditie blijven.`,
 
         faq: [
-            { question: "Welke ruimtes kunnen jullie renoveren?", answer: "Wij renoveren keukens, badkamers, kelders en andere loodgietersgerelateerde ruimtes." },
-            { question: "Kan ik zelf materialen kiezen voor de renovatie?", answer: "Ja, wij adviseren u over de beste materialen, maar de keuze is geheel aan u." },
-            { question: "Hoe lang duurt een gemiddelde renovatie?", answer: "De duur van een renovatie hangt af van de grootte van het project, maar gemiddeld duurt het 1 tot 3 weken." }
+            { question: 'Kunnen jullie samenwerken met onze aannemer?', answer: 'Ja, we sluiten aan op uw bouwteam en stemmen planning en oplevermomenten af.' },
+            { question: 'Leveren jullie ook revisietekeningen?', answer: 'Alle documentatie wordt digitaal aangeleverd inclusief revisiesets en certificaten.' },
+            { question: 'Hoe gaan jullie om met meerwerk?', answer: 'We melden afwijkingen direct en communiceren opties en kosten voordat we verdergaan.' }
         ]
-    }];
+    },
+    {
+        Id: '6',
+        sImg: '/images/service/kelder-loodgieter.jpg',
+        sIcon: '/images/icon/pipe.png',
+        slug: 'logistiek-waterbeheer',
+        sTitle: 'Logistiek & industrie',
+        description: 'Waterbeheer, vorstbeveiliging en procesleidingen voor distributiecentra en productiebedrijven.',
+        ssImg1: '/images/service-single/1.jpg',
+        ssImg2: '/images/service-single/2.jpg',
+
+        seoHeader1: 'Procesinfrastructuur op maat',
+        longText1: `Logistieke hubs en productielocaties vragen om robuuste installaties. Wij ontwerpen en onderhouden proceswater, blusleidingen en vorstvrije systemen volgens uw operationele eisen.`,
+
+        seoHeader2: 'Vorstbeveiliging en trace heating',
+        longText2: `We installeren vorstvrije leidingen, plaatsen trace heating en monitoren kritieke punten. Zo blijven docks, laadkuilen en buitenterreinen operationeel in de winter.`,
+
+        seoHeader3: 'Monitoring en rapportage',
+        longText3: `Met sensoren en slimme meters houden we verbruik en druk in de gaten. Afwijkingen leiden automatisch tot een melding zodat we proactief kunnen ingrijpen.`,
+
+        seoHeader4: 'Veiligheid en compliance',
+        longText4: `We werken volgens de veiligheidsprotocollen van uw locatie, voeren werkvergunningen en LMRA’s uit en leveren de benodigde rapportages voor verzekeraar en brandweer.`,
+
+        faq: [
+            { question: 'Hebben jullie ervaring met high-risk locaties?', answer: 'Ja, onze monteurs zijn VCA-vol gecertificeerd en gewend aan streng beveiligde locaties.' },
+            { question: 'Kunnen jullie samenwerken met onze procesengineers?', answer: 'We stemmen ontwerpen en onderhoudsplannen af met uw engineers voor optimale integratie.' },
+            { question: 'Leveren jullie ook monitoring-oplossingen?', answer: 'Wij plaatsen sensoren en koppelen data aan dashboards voor uw facilitair team.' }
+        ]
+    }
+];
 
 export default Services;

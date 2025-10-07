@@ -3,23 +3,23 @@ import React from 'react';
 const funFact = [
     {
         fIcon: '/images/icon/9.png',
-        title: '24/7',
-        subTitle: 'Bereikbaarheid',
+        title: '45+',
+        subTitle: 'Actieve servicecontracten',
     },
     {
         fIcon: '/images/icon/10.png',
-        title: '99%',
-        subTitle: 'Klanttevredenheid',
+        title: '98%',
+        subTitle: 'Uptime bij vaste klanten',
     },
     {
         fIcon: '/images/icon/11.png',
-        title: '12',
-        subTitle: 'Regio’s bediend',
+        title: '22',
+        subTitle: 'Steden in beheer',
     },
     {
         fIcon: '/images/icon/12.png',
-        title: '120K',
-        subTitle: 'Afgelegde km/jaar',
+        title: '1.200+',
+        subTitle: 'Storingen per jaar opgelost',
     },
 ];
 
@@ -31,9 +31,9 @@ const FunFact = () => {
                     {/* Linkerkant met tekst en reviewscore */}
                     <div className="col-lg-5">
                         <div className="wpo-funfacts-text">
-                            <h3>Wij onderscheiden ons door onze klantgerichte service</h3>
+                            <h3>Wij borgen continuïteit voor uw locaties</h3>
                             <div className="customer-review">
-                                <h2>5</h2>
+                                <h2>4.9</h2>
                                 <div className="reviews">
                                     <ul>
                                         <li>
@@ -52,7 +52,7 @@ const FunFact = () => {
                                             <i className="fa fa-star" aria-hidden="true"></i>
                                         </li>
                                     </ul>
-                                    <span>Gemiddelde klantbeoordeling</span>
+                                    <span>Klanttevredenheid facility managers</span>
                                 </div>
                             </div>
                         </div>
