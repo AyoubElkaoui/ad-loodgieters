@@ -15,6 +15,10 @@ export async function POST(req) {
         const files = data.getAll('files');
         const recaptchaToken = data.get('recaptchaToken');
 
+        if (!recaptchaToken) {
+            throw new Error('reCAPTCHA token ontbreekt. Probeer het opnieuw.');
+        }
+
         // reCAPTCHA validatie
         const recaptchaResponse = await fetch('https://www.google.com/recaptcha/api/siteverify', {
             method: 'POST',
@@ -27,7 +31,16 @@ export async function POST(req) {
         const recaptchaResult = await recaptchaResponse.json();
 
         if (!recaptchaResult.success) {
+            console.error('reCAPTCHA validatie mislukt:', recaptchaResult['error-codes']);
             throw new Error('reCAPTCHA validatie mislukt. Probeer het opnieuw.');
+        }
+
+        if (recaptchaResult.action && recaptchaResult.action !== 'submit_contact_form') {
+            throw new Error('Ongeldige reCAPTCHA-actie gedetecteerd.');
+        }
+
+        if (typeof recaptchaResult.score === 'number' && recaptchaResult.score < 0.5) {
+            throw new Error('reCAPTCHA score te laag. Probeer het opnieuw.');
         }
 
         // Server-side validatie

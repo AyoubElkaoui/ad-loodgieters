@@ -1,6 +1,5 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import SimpleReactValidator from 'simple-react-validator';
-import ReCAPTCHA from "react-google-recaptcha";
 import { toast, ToastContainer } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 
@@ -38,7 +37,7 @@ const ContactForm = () => {
         projectType: '',
         message: '',
     });
-    const [recaptchaToken, setRecaptchaToken] = useState(null);
+    const [isRecaptchaReady, setIsRecaptchaReady] = useState(false);
     const [status, setStatus] = useState('');
     const formRef = useRef(null);
 
@@ -56,13 +55,36 @@ const ContactForm = () => {
 
     const RECAPTCHA_SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
 
+    useEffect(() => {
+        if (typeof window === 'undefined' || !RECAPTCHA_SITE_KEY) {
+            return;
+        }
+
+        const scriptId = 'recaptcha-v3-script';
+        const scriptSrc = `https://www.google.com/recaptcha/api.js?render=${RECAPTCHA_SITE_KEY}`;
+        const existingScript = document.getElementById(scriptId);
+
+        if (existingScript) {
+            setIsRecaptchaReady(true);
+            return;
+        }
+
+        const script = document.createElement('script');
+        script.id = scriptId;
+        script.src = scriptSrc;
+        script.async = true;
+        script.defer = true;
+        script.onload = () => setIsRecaptchaReady(true);
+        script.onerror = () => {
+            console.error('reCAPTCHA script kon niet worden geladen.');
+            setIsRecaptchaReady(false);
+        };
+        document.body.appendChild(script);
+    }, [RECAPTCHA_SITE_KEY]);
+
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
         validator.current.showMessageFor(e.target.name);
-    };
-
-    const handleRecaptchaChange = (token) => {
-        setRecaptchaToken(token);
     };
 
     const validateForm = () => {
@@ -84,11 +106,38 @@ const ContactForm = () => {
             return;
         }
 
+        if (!RECAPTCHA_SITE_KEY) {
+            setStatus('reCAPTCHA is niet geconfigureerd. Contacteer de beheerder.');
+            return;
+        }
+
+        if (!isRecaptchaReady || typeof window === 'undefined' || !window.grecaptcha) {
+            setStatus('Beveiligingscontrole wordt geladen. Probeer het opnieuw.');
+            return;
+        }
+
+        let recaptchaToken = '';
+
+        try {
+            recaptchaToken = await new Promise((resolve, reject) => {
+                window.grecaptcha.ready(() => {
+                    window.grecaptcha.execute(RECAPTCHA_SITE_KEY, { action: 'submit_contact_form' })
+                        .then(resolve)
+                        .catch(reject);
+                });
+            });
+        } catch (error) {
+            console.error('reCAPTCHA fout:', error);
+            setStatus('reCAPTCHA validatie mislukt. Probeer het opnieuw.');
+            toast.error('reCAPTCHA validatie mislukt. Probeer het opnieuw.');
+            return;
+        }
+
         const formDataToSend = new FormData();
         Object.entries(formData).forEach(([key, value]) => {
             formDataToSend.append(key, value);
         });
-        formDataToSend.append('recaptchaToken', recaptchaToken || '');
+        formDataToSend.append('recaptchaToken', recaptchaToken);
 
         try {
             const response = await fetch('/api/contact', {
@@ -112,7 +161,6 @@ const ContactForm = () => {
                     projectType: '',
                     message: '',
                 });
-                setRecaptchaToken(null);
             } else {
                 const { error } = await response.json();
                 setStatus(error || 'Er is iets misgegaan bij het verzenden van het bericht.');
@@ -302,7 +350,11 @@ const ContactForm = () => {
             {/* reCAPTCHA */}
             <div className="form-group mt-3">
                 {RECAPTCHA_SITE_KEY ? (
-                    <ReCAPTCHA sitekey={RECAPTCHA_SITE_KEY} onChange={handleRecaptchaChange} />
+                    <small>
+                        Deze site wordt beschermd door reCAPTCHA en de Google{' '}
+                        <a href="https://policies.google.com/privacy" target="_blank" rel="noreferrer">Privacy Policy</a> en{' '}
+                        <a href="https://policies.google.com/terms" target="_blank" rel="noreferrer">Terms of Service</a> zijn van toepassing.
+                    </small>
                 ) : (
                     <p style={{ color: 'red' }}>
                         Er ontbreekt een reCAPTCHA site key (NEXT_PUBLIC_RECAPTCHA_SITE_KEY).
