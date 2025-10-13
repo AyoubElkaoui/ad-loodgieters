@@ -8,10 +8,12 @@ import '../styles/sass/style.scss';
 import { ToastContainer } from 'react-toastify';
 import { PersistGate } from "redux-persist/integration/react";
 import { store, persistor } from "../store/index";
+import { Analytics } from "@vercel/analytics/next"
 import { Provider } from "react-redux";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Head from 'next/head'; // Importeer Head van next/head
+
 
 function MyApp({ Component, pageProps }) {
     return (
@@ -26,6 +28,7 @@ function MyApp({ Component, pageProps }) {
                 </Head>
                 <Component {...pageProps} />
                 <ToastContainer />
+                <Analytics />
             </PersistGate>
         </Provider>
     );
