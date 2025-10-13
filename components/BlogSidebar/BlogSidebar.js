@@ -39,7 +39,7 @@ const BlogSidebar = () => {
 
                 {/* Categorieën */}
                 <div className="widget category-widget">
-                    <h3>Thema’s</h3>
+                    <h3>Categorieën</h3>
                     <ul>
                         {allCategories.map((cat, index) => (
                             <li key={index}>
@@ -67,13 +67,13 @@ const BlogSidebar = () => {
 
                 {/* CTA Naar contactpagina */}
                 <div className="widget cta-widget">
-                    <h3>Plan een technisch overleg</h3>
+                    <h3>Hulp Nodig?</h3>
                     <p>
-                        Wilt u weten hoe wij uw filialen, VvE of hotelportefeuille ontzorgen? Plan direct een call
-                        met onze servicemanager.
+                        Heeft u snel hulp nodig of wilt u meer weten over onze
+                        loodgietersdiensten? Neem vandaag nog contact met ons op!
                     </p>
                     <Link href="/contact">
-                        Neem contact op
+                        Neem Contact Op
                     </Link>
                 </div>
 

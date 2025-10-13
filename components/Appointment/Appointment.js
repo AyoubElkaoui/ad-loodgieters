@@ -41,12 +41,8 @@ const Appointment = () => {
                         <div className="col-lg-6 col-md-12 col-12">
                             <div className="wpo-contact-form-area">
                                 <div className="wpo-section-title-s2">
-                                    <span>ZAKELIJKE AFSPRAAK</span>
-                                    <h2>Plan een technisch overleg</h2>
-                                    <p>
-                                        Bespreek uw onderhoudscontract, renovatieplanning of spoedvraag direct met ons
-                                        serviceteam. Wij stemmen ons plan af op uw bedrijfsprocessen.
-                                    </p>
+                                    <span>ONLINE AFSPRAAK</span>
+                                    <h2>Maak direct een afspraak</h2>
                                 </div>
 
                                 {/* Vervang het formulier door de ContactForm-component */}

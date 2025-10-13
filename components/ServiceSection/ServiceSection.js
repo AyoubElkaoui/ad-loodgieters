@@ -30,22 +30,24 @@ const ServiceSection = () => {
                             <div className="col-lg-7 col-md-12 col-12">
                                 <div className="wpo-about-content">
                                     <div className="wpo-section-title-s2">
-                                        <h2>Loodgietersdiensten voor bedrijven & vastgoed</h2>
+                                        <h2>Volledig assortiment loodgietersdiensten</h2>
                                     </div>
                                     <div className="wpo-about-content-inner">
                                         <p>
-                                            Wij ondersteunen facilitaire teams, VvE&apos;s en horecaketens met
-                                            preventief onderhoud, 24/7 storingsdienst en projectbegeleiding. Eén
-                                            aanspreekpunt dat planning, rapportage en uitvoering regelt.
+                                            Bij Ad-Loodgietersbedrijf bent u aan het juiste adres voor
+                                            een breed scala aan loodgieterswerk. Of het nu gaat om een
+                                            hardnekkige verstopping of een volledige renovatie — onze
+                                            experts staan voor u klaar.
                                         </p>
                                         <p>
-                                            Of het nu gaat om een landelijke keten of een enkel bedrijfspand:
-                                            we werken met gecertificeerde monteurs, strakke SLA&apos;s en transparante
-                                            communicatie zodat u geen verrassingen heeft.
+                                            Dankzij onze 10+ jaar aan vakkennis bedienen we zowel
+                                            particuliere als zakelijke klanten. We werken met duurzame
+                                            materialen en hanteren heldere tarieven, zodat u altijd weet
+                                            waar u aan toe bent.
                                         </p>
                                         <div className="signeture">
                                             <h4>Ad-Loodgietersbedrijf</h4>
-                                            <p>Zakelijke installaties in veilige handen</p>
+                                            <p>Expert in allround loodgieterswerk</p>
                                             <div
                                                 className="wpo-about-btn"
                                                 style={{ marginTop: '1.5rem' }}
@@ -54,7 +56,7 @@ const ServiceSection = () => {
                                                     href="/contact"
                                                     className="theme-btn"
                                                 >
-                                                    Plan een consult
+                                                    Neem contact op
                                                 </Link>
                                             </div>
                                         </div>
@@ -71,11 +73,12 @@ const ServiceSection = () => {
                 <div className="container">
                     <div className="row align-items-center justify-content-center">
                         <div className="col-lg-5">
-                            <SectionTitle MainTitle="Onze kernoplossingen" />
+                            <SectionTitle MainTitle="Een greep uit onze diensten" />
                             <p style={{ marginTop:'-2rem', marginBottom: '3rem' }}>
-                                Wij beheren water-, gas- en sanitairinstallaties voor retail, hospitality,
-                                kantoor- en zorglocaties. Onderhoud, renovatie en spoedherstel via één
-                                specialistisch team.
+                                Wij bieden complete oplossingen voor elke loodgietersklus.
+                                Van preventief onderhoud tot spoedhulp bij lekkages –
+                                <br /> Ad-Loodgietersbedrijf staat garant voor kwaliteit en
+                                klanttevredenheid.
                             </p>
                         </div>
                     </div>

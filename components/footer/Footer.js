@@ -20,9 +20,9 @@ const Footer = (props) => {
                                     <img src="/images/logo2.png" alt="AD Loodgieters" />
                                 </div>
                                 <p>
-                                    AD-Loodgietersbedrijf ondersteunt bedrijven, VvE&apos;s en aannemers met continu
-                                    onderhoud, renovaties en 24/7 storingsdienst. U rekent op een vaste partner die
-                                    installaties bedrijfszeker houdt.
+                                    AD-Loodgietersbedrijf staat dag en nacht voor u klaar. Of het nu gaat
+                                    om spoedklussen, installaties of onderhoud: bij ons bent u
+                                    verzekerd van vakkundig werk.
                                 </p>
                                 <ul>
                                     <li>

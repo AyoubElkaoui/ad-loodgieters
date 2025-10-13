@@ -4282,10 +4282,6 @@ hero slider
   margin-bottom: 20px;
 }
 .wpo-service-section-s2 .wpo-service-item .wpo-service-img img {
-  width: 90px;
-  height: auto;
-  margin: 0 auto;
-  display: block;
   user-drag: none;
   -webkit-user-drag: none;
   user-select: none;
@@ -4315,23 +4311,12 @@ hero slider
 }
 .wpo-service-section-s2 .wpo-service-item .visible-icon img {
   width: 140%;
-  max-width: 220px;
-  height: auto;
   user-drag: none;
   -webkit-user-drag: none;
   user-select: none;
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
-}
-.wpo-service-section-s2 .wpo-service-item .visible-icon.visible-icon-warning {
-  right: 10px;
-  top: 10px;
-  opacity: 0.12;
-}
-.wpo-service-section-s2 .wpo-service-item .visible-icon.visible-icon-warning img {
-  width: 100px;
-  max-width: none;
 }
 
 /* 5.3 wpo-fun-fact-section-s2 */

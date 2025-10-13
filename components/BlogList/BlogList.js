@@ -14,8 +14,8 @@ const BlogList = () => {
                     <div className="col-lg-6 col-md-8 col-12">
                         {/* Eventueel een hoofdtitel/subtitel */}
                         <div className="section-title text-center">
-                            <h2>Strategische updates</h2>
-                            <p>Lees hoe wij multi-site installaties beheren en welke trends facility teams raken.</p>
+                            <h2>Ons Blogoverzicht</h2>
+                            <p>Laat je inspireren door onze nieuwste berichten, tips en inzichten.</p>
                         </div>
                     </div>
                 </div>

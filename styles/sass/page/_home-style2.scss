@@ -83,10 +83,6 @@
              margin-bottom: 20px;
 
              img{
-                 width: 90px;
-                 height: auto;
-                 margin: 0 auto;
-                 display: block;
                  user-drag: none;
                 -webkit-user-drag: none;
                 user-select: none;
@@ -123,25 +119,12 @@
 
             img{
                 width: 140%;
-                max-width: 220px;
-                height: auto;
                 user-drag: none;
                 -webkit-user-drag: none;
                 user-select: none;
                 -moz-user-select: none;
                 -webkit-user-select: none;
                 -ms-user-select: none;
-            }
-            
-            &.visible-icon-warning{
-                right: 10px;
-                top: 10px;
-                opacity: 0.12;
-
-                img{
-                    width: 100px;
-                    max-width: none;
-                }
             }
         }
     }

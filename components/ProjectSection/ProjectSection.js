@@ -37,20 +37,24 @@ const ProjectSection = () => {
                             <div className="col-lg-7 col-md-12 col-12">
                                 <div className="wpo-about-content">
                                     <div className="wpo-section-title-s2">
-                                        <h2>Projecten met zakelijke impact</h2>
+                                        <h2>Een kijkje in onze projecten</h2>
                                     </div>
                                     <div className="wpo-about-content-inner">
                                         <p>
-                                            Wij beheren installaties voor landelijke ketens, hotels, VvE&apos;s en logistieke hubs.
-                                            Elk project kent strakke planning, duidelijke rapportage en een team dat 24/7 klaarstaat.
+                                            Van kleinschalige reparaties tot grootschalige renovaties:
+                                            Ad-Loodgietersbedrijf heeft jarenlange ervaring met
+                                            verschillende soorten projecten. Hier combineren we
+                                            vakmanschap met duurzame oplossingen.
                                         </p>
                                         <p>
-                                            Of het nu om multi-site onderhoud of een complexe renovatie gaat: wij coördineren het hele traject
-                                            zodat uw organisatie operationeel blijft en voldoet aan alle veiligheids- en hygiënenormen.
+                                            Onze werkwijze kenmerkt zich door heldere communicatie en
+                                            een hoge kwaliteit van oplevering. Of u nu in een
+                                            particulierenwoning of een bedrijfspand woont, wij passen
+                                            ons aan aan uw situatie.
                                         </p>
                                         <div className="signeture">
                                             <h4>Ad-Loodgietersbedrijf</h4>
-                                            <p>Technisch partner voor vastgoed & facility</p>
+                                            <p>Professionals in totaaloplossingen</p>
                                             <div
                                                 className="wpo-about-btn"
                                                 style={{ marginTop: '1.5rem' }}
@@ -59,7 +63,7 @@ const ProjectSection = () => {
                                                     href="/contact"
                                                     className="theme-btn"
                                                 >
-                                                    Plan een projectscan
+                                                    Neem contact op
                                                 </Link>
                                             </div>
                                         </div>
@@ -77,8 +81,8 @@ const ProjectSection = () => {
                     <div className="row align-items-center justify-content-center">
                         <div className="col-lg-6">
                             <SectionTitle
-                                MainTitle="Recente samenwerkingen"
-                                SubTitle="Een selectie van projecten voor ketens, VvE’s en corporate locaties waar wij het loodgietersbeheer verzorgen."
+                                MainTitle="Onze laatste projecten"
+                                SubTitle="Bekijk hieronder enkele recente loodgietersklussen die wij tot een succes hebben gemaakt. Van lekkageoplossingen tot complete verbouwingen."
                             />
                         </div>
                     </div>

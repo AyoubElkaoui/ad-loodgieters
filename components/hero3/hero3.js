@@ -12,22 +12,22 @@ const Hero3 = () => {
                         <div className="wpo-hero-section-text">
                             {/* Ondertitel / kleine slogan */}
                             <div className="wpo-hero-subtitle">
-                                <span>:: Partner voor zakelijke vastgoedbeheer</span>
+                                <span>:: Vakkundig & Ervaren Team</span>
                             </div>
 
                             {/* Hoofdtitel */}
                             <div className="wpo-hero-title">
                                 <h2>
-                                    Zakelijke <span>loodgietersdiensten</span> zonder stilstand.
+                                    Altijd <span>bereikbaar</span> voor u.
                                 </h2>
                             </div>
 
                             {/* Korte omschrijving */}
                             <div className="wpo-hero-des">
                                 <p>
-                                    Wij helpen bedrijven, VvE&apos;s en facilitaire teams met 24/7 onderhoud,
-                                    renovaties en spoedherstel. Van utiliteitsbouw tot retail: uw installaties
-                                    blijven veilig, efficiënt en bedrijfszeker.
+                                    Wij zijn een gecertificeerd loodgietersbedrijf. Of het nu gaat
+                                    om een lekkage, verstopping of een complete installatie,
+                                    wij staan voor u klaar – 24/7 dag en nacht.
                                 </p>
                             </div>
 
@@ -36,7 +36,7 @@ const Hero3 = () => {
                                 <ul>
                                     <li>
                                         <Link href="/contact" className="theme-btn">
-                                            Plan een zakelijk gesprek
+                                            Neem contact op
                                         </Link>
                                     </li>
                                 </ul>

@@ -51,34 +51,34 @@ const settings = {
 // Google Reviews in een array
 const testimonial = [
     {
-        tsImg: "/images/testimonial/img-1.jpg",
-        Des: "AD-Loodgietersbedrijf bewaakt onze waterkwaliteit en sanitair in meer dan twintig Starbucks filialen. Incidenten worden direct opgelost en ik ontvang na elke interventie een helder rapport.",
-        Title: "Eva Meijer",
-        Sub: "Regional Facilities Manager • Starbucks Nederland",
+        tsImg: "/images/testimonial/avatar-ayoub.jpg", // of een algemene avatar
+        Des: "Vandaag problemen gehad met een toiletverstopping. Door de geweldige prestatie en snelheid van Anass ben ik in 10 minuten geholpen. Topservice!",
+        Title: "Ayoub el kaoui",
+        Sub: "2 reviews • een maand geleden",
     },
     {
-        tsImg: "/images/testimonial/img-2.jpg",
-        Des: "Voor de verbouwing van onze keukenlijnen zochten we een partner die nachtelijk werk aankan en HACCP borgt. Hun team leverde, zonder onze gasten te hinderen.",
-        Title: "Tom de Ruiter",
-        Sub: "Technisch Projectleider • La Place",
+        tsImg: "/images/testimonial/avatar-joppe.jpg",
+        Des: "Zeer prettig geholpen! Ik had een probleem met de stadsverwarming in mijn huis en dat is heel vakkundig opgelost. Bovendien heel aardig en via WhatsApp goed te woord gestaan.",
+        Title: "Joppe Ter Meer",
+        Sub: "8 reviews • 3 weken geleden",
     },
     {
-        tsImg: "/images/testimonial/img-3.jpg",
-        Des: "De reactietijd en de rapportages sluiten perfect aan op onze SLA's. Van lekdetectie tot renovaties; één aanspreekpunt dat alles regelt.",
-        Title: "Marleen Visser",
-        Sub: "Contractmanager • BAM Facility Management",
+        tsImg: "/images/testimonial/avatar-raj.jpg",
+        Des: "Problemen gehad met de afvoer van de wasbak. De aardige man heeft het probleem heel goed aangepakt en helemaal opgelost.",
+        Title: "Raj Winder",
+        Sub: "1 review • een maand geleden",
     },
     {
-        tsImg: "/images/testimonial/img-1.jpg",
-        Des: "Voor Rizani De Echer Hotel verzorgt het team de kamer- en wellnessinstallaties. Gasten merken niets van onderhoud en wij houden grip op de planning.",
-        Title: "Giovanni Rizzo",
-        Sub: "Operations Director • Rizani De Echer Hotel",
+        tsImg: "/images/testimonial/avatar-lukas.jpg",
+        Des: "Goede loodgieter, eerlijke prijs. Mocht je ooit weer hulp nodig hebben, dan staan ze voor je klaar!",
+        Title: "Lukas Burgering",
+        Sub: "1 review • 2 dagen geleden",
     },
     {
-        tsImg: "/images/testimonial/img-2.jpg",
-        Des: "Onze VvE heeft een onderhoudsplan nodig met 24/7 service. Sinds de overstap zijn storingen sneller verholpen en blijft het gebouw waardevast.",
-        Title: "Sandra Willems",
-        Sub: "Bestuurslid • VvE Horizon Utrecht",
+        tsImg: "/images/testimonial/avatar-ricardo.jpg",
+        Des: "Fijne service en snel geholpen! Zeker een aanrader als je een loodgieter zoekt.",
+        Title: "Ricardo Spies",
+        Sub: "1 review • een maand geleden",
     },
 ];
 
@@ -89,7 +89,7 @@ const Testimonial = () => {
                 <div className="row align-items-center justify-content-center">
                     <div className="col-lg-6">
                         {/* Nederlandstalige titel via SectionTitle */}
-                        <SectionTitle MainTitle={"Hoe klanten onze samenwerking ervaren"} />
+                        <SectionTitle MainTitle={"Wat zeggen onze klanten?"} />
                     </div>
                 </div>
                 <div className="row align-items-center">

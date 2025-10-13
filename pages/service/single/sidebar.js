@@ -31,12 +31,11 @@ const ServiceSidebar = (props) => {
                 </div>
 
                 <div className="wpo-contact-widget widget">
-                    <h2>Plan een servicemeeting</h2>
+                    <h2>Hoe kunnen wij u helpen?</h2>
                     <p>
-                        Bespreek uw onderhoudscontract of project met onze servicemanager. We leveren maatwerk voor ketens,
-                        VvE&apos;s en corporate locaties.
+                        Neem contact met ons op voor deskundig advies en snelle service, op maat van uw wensen.
                     </p>
-                    <Link href="/contact">Plan een afspraak</Link>
+                    <Link href="/contact">Neem contact op</Link>
                 </div>
             </div>
         </div>

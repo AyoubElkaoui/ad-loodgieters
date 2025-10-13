@@ -89,7 +89,7 @@ const Header = (props) => {
                             <div className="col-lg-2 col-md-2 col-2">
                                 <div className="header-right">
                                     <div className="close-form">
-                                        <Link onClick={ClickHandler} href="/contact" className="theme-btn">Zakelijke storingslijn</Link>
+                                        <Link onClick={ClickHandler} href="/contact" className="theme-btn">Spoed 24/7</Link>
                                     </div>
                                 </div>
                             </div>

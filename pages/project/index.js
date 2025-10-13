@@ -14,7 +14,7 @@ const ProjectPage =() => {
     return(
         <Fragment>
             <Navbar/>
-            <PageTitle pageTitle={'Zakelijke projecten'} pagesub={'Projecten'}/>
+            <PageTitle pageTitle={'Projecten'} pagesub={'Projecten'}/>
             <ProjectSection/>
             <FunFact/>
             <TeamSection/>

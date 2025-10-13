@@ -9,7 +9,7 @@ const ContactPage =() => {
     return(
         <Fragment>
             <Navbar/>
-            <PageTitle pageTitle={'Zakelijk contact'} pagesub={'Contact'}/>
+            <PageTitle pageTitle={'Neem contact op'} pagesub={'Contact'}/>
             <Contactpage/>
             <Footer/>
             <Scrollbar/>
@@ -17,3 +17,4 @@ const ContactPage =() => {
     )
 };
 export default ContactPage;
+

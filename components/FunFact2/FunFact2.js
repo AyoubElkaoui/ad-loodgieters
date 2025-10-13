@@ -3,23 +3,23 @@ import React from 'react';
 const funFact = [
     {
         fIcon: '/images/icon/9.png',
-        title: '150+',
-        subTitle: 'Zakelijke onderhoudscontracten',
+        title: '500+',
+        subTitle: 'Projecten voltooid',
     },
     {
         fIcon: '/images/icon/10.png',
         title: '10+',
-        subTitle: 'Serviceploegen in de Randstad',
+        subTitle: 'Ervaren monteurs',
     },
     {
         fIcon: '/images/icon/11.png',
-        title: '4.9/5',
-        subTitle: 'Klanttevredenheid zakelijk',
+        title: '5/5',
+        subTitle: 'Google reviewscore',
     },
     {
         fIcon: '/images/icon/12.png',
         title: '24/7',
-        subTitle: 'Spoedservice binnen 2 uur',
+        subTitle: 'Spoedservice',
     },
 ];
 
