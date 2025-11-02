@@ -15,9 +15,6 @@ module.exports = {
                 disallow: ['/api/', '/admin/', '/_next/', '/404/'],
             },
         ],
-        additionalSitemaps: [
-            `${siteUrl}/sitemap.xml`,
-        ],
     },
     changefreq: 'weekly',
     priority: 0.7,

@@ -13,8 +13,7 @@ module.exports = {
       userAgent: '*',
       allow: '/',
       disallow: ['/api/', '/admin/', '/_next/', '/404/']
-    }],
-    additionalSitemaps: ["".concat(siteUrl, "/sitemap.xml")]
+    }]
   },
   changefreq: 'weekly',
   priority: 0.7,
