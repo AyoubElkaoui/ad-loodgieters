@@ -30,7 +30,7 @@ const Header = (props) => {
                             <div className="col-lg-3 col-md-6 col-6">
                                 <div className="navbar-header">
                                     <Link onClick={ClickHandler} href="/home" className="navbar-brand">
-                                        <img src='/images/logo.png' alt="" />
+                                        <img src='/images/AD-Loodgietersbedrijf (1).svg' alt="" style={{ width: '250px', height: 'auto' }} />
                                     </Link>
                                 </div>
                             </div>
@@ -45,7 +45,7 @@ const Header = (props) => {
                                             <Link onClick={ClickHandler} href="/about">Over ons</Link>
                                         </li>
                                         <li className="menu-item-has-children">
-                                            <Link href="/service">Onze Diensten</Link>
+                                            <Link href="/service/">Onze Diensten</Link>
                                             <ul className="sub-menu">
                                                 {Services.map((service) => (
                                                     <li key={service.Id}>
@@ -71,13 +71,13 @@ const Header = (props) => {
                                         <li className="menu-item-has-children">
                                             <Link href="/blog">Blog</Link>
                                             <ul className="sub-menu">
-                                                {Blogs.map((blog) => (
-                                                    <li key={blog.id}>
-                                                        <Link onClick={ClickHandler} href={`/blog/${blog.slug}`}>
-                                                            {blog.title}
-                                                        </Link>
-                                                    </li>
-                                                ))}
+                                        {Blogs.map((blog) => (
+                                            <li key={blog.id}>
+                                                <Link onClick={ClickHandler} href={`/blog-single/${blog.slug}`}>
+                                                    {blog.title}
+                                                </Link>
+                                            </li>
+                                        ))}
                                             </ul>
                                         </li>
                                         <li>

@@ -102,23 +102,7 @@
 }
 
 /* Jouw bestaande code voor .wpo-service-single-section... */
-.wpo-service-single-section{
-    /* IK LAAT DE REST ZOALS JOUW CODE.
-       HIER KUN JE DUS JE EIGEN STYLING BEHOUDEN.
-       Gewoon even checken dat niets conflicteert. */
-
-    /* Voorbeeld:
-    .wpo-service-single-wrap {
-      ...
-    }
-
-    .wpo-service-single-content {
-      ...
-    }
-
-    etc.
-    */
-}
+/* Verwijderd: lege ruleset veroorzaakt lint error */
 
 /* Extra: styling voor .wpo-faq-section als je dat op blogstyle wilt laten lijken */
 .wpo-faq-section {
@@ -129,5 +113,311 @@
         margin-bottom: 25px;
         color: #333;
         text-transform: uppercase;
+    }
+}
+
+/* Utrecht specifieke service secties */
+.keuken-service-section,
+.badkamer-service-section,
+.overvecht-service-section,
+.nieuwegein-service-section,
+.leidsche-rijn-service-section,
+.vleuten-service-section {
+    padding: 80px 0;
+    background-color: $section-bg-color;
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -15px;
+
+        .col-lg-6 {
+            flex: 0 0 50%;
+            max-width: 50%;
+            padding: 0 15px;
+
+            @media (max-width: 991px) {
+                flex: 0 0 100%;
+                max-width: 100%;
+                margin-bottom: 40px;
+            }
+        }
+    }
+
+    .service-content {
+        h2 {
+            font-size: 36px;
+            font-weight: 700;
+            color: $heading-color;
+            margin-bottom: 20px;
+            line-height: 1.3;
+
+            @media (max-width: 767px) {
+                font-size: 28px;
+            }
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: $body-color;
+            margin-bottom: 30px;
+        }
+
+        .service-list {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 40px;
+
+            li {
+                display: flex;
+                align-items: center;
+                margin-bottom: 15px;
+                font-size: 16px;
+                color: $body-color;
+
+                i {
+                    color: $theme-primary-color;
+                    margin-right: 10px;
+                    font-size: 18px;
+                }
+            }
+        }
+
+        .contact-info {
+            background-color: $theme-primary-color;
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+
+            h3 {
+                color: $white;
+                font-size: 24px;
+                margin-bottom: 10px;
+                font-weight: 600;
+            }
+
+            p {
+                color: $white;
+                font-size: 18px;
+                margin-bottom: 10px;
+
+                a {
+                    color: $white;
+                    text-decoration: underline;
+
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+
+                &:last-child {
+                    font-size: 16px;
+                    font-weight: 500;
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    .service-image {
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+    }
+}
+
+/* Loodgieter Utrecht specifieke secties */
+.loodgieter-utrecht-hero {
+    background: linear-gradient(135deg, $section-bg-color 0%, #f8f9fa 100%);
+    padding: 100px 0;
+    position: relative;
+
+    @media (max-width: 767px) {
+        padding: 60px 0;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+
+    .row {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 0 -15px;
+
+        .col-lg-8,
+        .col-lg-4 {
+            padding: 0 15px;
+        }
+
+        .col-lg-8 {
+            @media (max-width: 991px) {
+                margin-bottom: 40px;
+            }
+        }
+    }
+
+    .hero-content {
+        h1 {
+            font-size: 42px;
+            font-weight: 700;
+            color: $heading-color;
+            margin-bottom: 20px;
+            line-height: 1.2;
+
+            @media (max-width: 767px) {
+                font-size: 32px;
+            }
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: $body-color;
+            margin-bottom: 30px;
+
+            @media (max-width: 767px) {
+                font-size: 16px;
+            }
+        }
+
+        .emergency-contact {
+            h3 {
+                font-size: 20px;
+                font-weight: 600;
+                color: $heading-color;
+                margin-bottom: 15px;
+            }
+
+            .emergency-btn {
+                display: inline-flex;
+                align-items: center;
+                background-color: $theme-primary-color;
+                color: $white;
+                padding: 15px 30px;
+                border-radius: 8px;
+                text-decoration: none;
+                font-size: 18px;
+                font-weight: 600;
+                transition: all 0.3s ease;
+
+                &:hover {
+                    background-color: darken($theme-primary-color, 10%);
+                    transform: translateY(-2px);
+                    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+                }
+
+                i {
+                    margin-right: 10px;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
+    .hero-image {
+        text-align: center;
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            max-height: 400px;
+            object-fit: cover;
+        }
+    }
+}
+
+.utrecht-services-section {
+    padding: 80px 0;
+    background-color: $white;
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+
+    .section-title {
+        text-align: center;
+        margin-bottom: 60px;
+
+        h2 {
+            font-size: 36px;
+            font-weight: 700;
+            color: $heading-color;
+            margin-bottom: 15px;
+
+            @media (max-width: 767px) {
+                font-size: 28px;
+            }
+        }
+
+        p {
+            font-size: 18px;
+            color: $body-color;
+            max-width: 600px;
+            margin: 0 auto;
+
+            @media (max-width: 767px) {
+                font-size: 16px;
+            }
+        }
+    }
+
+    .service-item-utrecht {
+        background-color: $white;
+        padding: 40px 30px;
+        border-radius: 8px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        text-align: center;
+        margin-bottom: 30px;
+        transition: all 0.3s ease;
+
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background-color: $theme-primary-color;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: $white;
+            font-size: 32px;
+        }
+
+        h3 {
+            font-size: 22px;
+            font-weight: 600;
+            color: $heading-color;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 16px;
+            color: $body-color;
+            line-height: 1.6;
+            margin: 0;
+        }
     }
 }

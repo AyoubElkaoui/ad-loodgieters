@@ -5,6 +5,7 @@ import '../styles/flaticon.css';
 import "../styles/font-awesome.min.css";
 import "../styles/themify-icons.css";
 import '../styles/sass/style.scss';
+import '../styles/landing-content.css';
 import { ToastContainer } from 'react-toastify';
 import { PersistGate } from "redux-persist/integration/react";
 import { store, persistor } from "../store/index";

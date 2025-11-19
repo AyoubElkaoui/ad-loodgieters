@@ -17,7 +17,7 @@ const Footer = (props) => {
                         <div className="col col-lg-3 col-md-6 col-sm-12 col-12">
                             <div className="widget about-widget">
                                 <div className="logo widget-title">
-                                    <img src="/images/logo2.png" alt="AD Loodgieters" />
+                                    <img src="/images/AD-Loodgietersbedrijf (2).svg" alt="AD Loodgieters" style={{ width: '200px', height: 'auto' }} />
                                 </div>
                                 <p>
                                     AD-Loodgietersbedrijf staat dag en nacht voor u klaar. Of het nu gaat

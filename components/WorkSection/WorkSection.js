@@ -16,7 +16,7 @@ const WorkSection = (props) => {
                                     <img src='/images/icon/7.png' alt=""/>
                                 </div>
                                 <div className="wpo-work-text">
-                                    <h2><Link onClick={ClickHandler} href="/service">Commercial Plumbing</Link></h2>
+                                    <h2><Link onClick={ClickHandler} href="/service/">Commercial Plumbing</Link></h2>
                                 </div>
                             </div>
                         </div>
@@ -26,7 +26,7 @@ const WorkSection = (props) => {
                                     <img src='/images/icon/8.png' alt=""/>
                                 </div>
                                 <div className="wpo-work-text">
-                                    <h2><Link onClick={ClickHandler} href="/service">Residential Plumbing</Link></h2>
+                                    <h2><Link onClick={ClickHandler} href="/service/">Residential Plumbing</Link></h2>
                                 </div>
                             </div>
                         </div>

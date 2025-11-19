@@ -26,7 +26,7 @@ const AboutPage = (props) => {
             '@type': 'Organization',
             name: 'AD-Loodgietersbedrijf',
             url: siteUrl,
-            logo: `${siteUrl}/images/logo.png`,
+            logo: `${siteUrl}/images/AD-Loodgietersbedrijf (1).svg`,
             description: 'Professionele loodgietersdiensten in Utrecht en omgeving sinds 2010',
             areaServed: {
                 '@type': 'Place',

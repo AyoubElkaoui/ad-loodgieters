@@ -6,7 +6,7 @@ import PageTitle from '../../components/pagetitle/PageTitle';
 import Scrollbar from '../../components/scrollbar/scrollbar';
 import Projects from '../../api/project'; // pad naar je Projects array
 import Footer from '../../components/footer/Footer';
-import ServiceSidebar from './sidebar';
+import ServiceSidebar from './Sidebar';
 
 // MUI Accordion voor de FAQ
 import Accordion from '@mui/material/Accordion';
